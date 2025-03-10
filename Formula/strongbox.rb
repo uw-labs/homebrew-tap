@@ -5,24 +5,24 @@
 class Strongbox < Formula
   desc "Encryption for git users"
   homepage "https://github.com/uw-labs/strongbox"
-  version "2.1.0-RC1"
+  version "2.1.0"
   license "LGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0-RC1/strongbox_2.1.0-RC1_darwin_amd64"
-      sha256 "9daab4e8a284f1bb8e4d72162e54483f1228d5e4ed99c3b0498cc8de3c77ef4f"
+      url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0/strongbox_2.1.0_darwin_amd64"
+      sha256 "73221d66c9643f60ebb30714e872078f51fca15438cae7a4a6eb10dc4f1a6460"
 
       def install
-        bin.install "strongbox_2.1.0-RC1_darwin_amd64" => "strongbox"
+        bin.install "strongbox_2.1.0_darwin_amd64" => "strongbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0-RC1/strongbox_2.1.0-RC1_darwin_arm64"
-      sha256 "0ce76f748881736b619dcfa1b04ea7c0374839fcaf9f0602b541017b7893ea22"
+      url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0/strongbox_2.1.0_darwin_arm64"
+      sha256 "9348f45d6d508597c450509308445d11b5984c695bcba8c26f84f5644c10b0ed"
 
       def install
-        bin.install "strongbox_2.1.0-RC1_darwin_arm64" => "strongbox"
+        bin.install "strongbox_2.1.0_darwin_arm64" => "strongbox"
       end
     end
   end
@@ -30,31 +30,31 @@ class Strongbox < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0-RC1/strongbox_2.1.0-RC1_linux_amd64"
-        sha256 "fa1adcbde1ccf03cf0000c487a8f70549981b99f3a22cfce9a8b43f8204468a1"
+        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0/strongbox_2.1.0_linux_amd64"
+        sha256 "fa7db053d32e1a6d55ab9c751e6eecf9aecb44b77f53d4b7a6648478a924e58d"
 
         def install
-          bin.install "strongbox_2.1.0-RC1_linux_amd64" => "strongbox"
+          bin.install "strongbox_2.1.0_linux_amd64" => "strongbox"
         end
       end
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0-RC1/strongbox_2.1.0-RC1_linux_armv6"
-        sha256 "32184f290811b88d6399b04015a44aef42c733a674c83957e8fa6c6fa2c82e2b"
+        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0/strongbox_2.1.0_linux_armv6"
+        sha256 "93251fdc3b97420b729127b7ff221bfbc0c0315f100c5d2de3ea340cddbe7656"
 
         def install
-          bin.install "strongbox_2.1.0-RC1_linux_armv6" => "strongbox"
+          bin.install "strongbox_2.1.0_linux_armv6" => "strongbox"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0-RC1/strongbox_2.1.0-RC1_linux_arm64"
-        sha256 "c0135d6365f35523a72922934e541b4f64c67627cc72b0986d1835791db51435"
+        url "https://github.com/uw-labs/strongbox/releases/download/v2.1.0/strongbox_2.1.0_linux_arm64"
+        sha256 "ff04c3395bfea176b1f9fe4ceb5fd0c00dbe6df1c504f4d8b4bf27d17799c58b"
 
         def install
-          bin.install "strongbox_2.1.0-RC1_linux_arm64" => "strongbox"
+          bin.install "strongbox_2.1.0_linux_arm64" => "strongbox"
         end
       end
     end
